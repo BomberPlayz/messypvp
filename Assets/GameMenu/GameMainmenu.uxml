@@ -1,0 +1,18 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 1; flex-direction: column; align-items: stretch;">
+        <engine:TextField label="Your name" placeholder-text="xXSkibidiXx" name="UsernameField" />
+        <engine:VisualElement name="VisualElement" style="flex-grow: initial; flex-direction: row; flex-basis: auto; align-self: auto; align-content: flex-start; align-items: flex-start; justify-content: flex-start; height: auto; flex-shrink: initial;">
+            <engine:TextField label="IP address" placeholder-text="If host, ignore" name="IpAddressField" style="width: 50%;" />
+            <engine:Toggle label="Host mode" name="IsServerToggle" />
+            <engine:Button text="Join" name="JoinButton" style="right: auto; align-self: auto; justify-content: flex-start; align-content: auto; margin-left: auto;" />
+        </engine:VisualElement>
+        <engine:MultiColumnListView name="PlayersListView" virtualization-method="FixedHeight" allow-add="true" allow-remove="true" show-add-remove-footer="false" style="flex-grow: 1;">
+            <engine:Columns primary-column-name="Player name" stretch-mode="GrowAndFill">
+                <engine:Column name="user" title="Username" stretchable="true" width="auto" resizable="true" sortable="true" />
+            </engine:Columns>
+        </engine:MultiColumnListView>
+        <engine:VisualElement style="flex-grow: initial; flex-shrink: initial; flex-direction: row-reverse;">
+            <engine:Button text="Start game" name="StartButton" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
